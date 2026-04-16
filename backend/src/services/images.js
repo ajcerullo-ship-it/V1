@@ -12,9 +12,9 @@ function buildStreetViewUrl(address) {
   const params = new URLSearchParams({
     size: '640x480',
     location: address,
-    fov: '90',
+    fov: '80',
     heading: '0',
-    pitch: '0',
+    pitch: '10',
     key: GOOGLE_API_KEY,
   });
   return `https://maps.googleapis.com/maps/api/streetview?${params.toString()}`;

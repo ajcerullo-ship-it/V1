@@ -9,7 +9,7 @@ Analyze both images carefully for signs of property distress and neglect.
 
 Look for these specific distress indicators:
 - Overgrown lawn / unmaintained landscaping
-- Junk cars, debris, or clutter in yard
+- Junk cars or abandoned vehicles ON THE PROPERTY (yard or driveway only — ignore all cars on the public street or road in front of the house)
 - Tarp on roof (blue/green tarps indicating roof damage)
 - Boarded windows or doors
 - Peeling/chipping paint on exterior
@@ -20,7 +20,10 @@ Look for these specific distress indicators:
 - Fence damage or collapse
 - Broken windows
 - Water damage or staining
+- Fire damage (char marks, burned siding, scorched roof, smoke staining, fire-damaged structure)
 - General severe neglect
+
+IMPORTANT: Do NOT flag cars that are driving on or parked on the public street/road. Only flag vehicles that are sitting in the yard, on the lawn, or abandoned on the driveway of the property itself.
 
 Respond with ONLY valid JSON in this exact format:
 {
@@ -34,7 +37,7 @@ Scoring guide:
 3-4: Minor issues (slightly overgrown, minor deferred maintenance)
 5-6: Moderate distress (multiple visible issues, clear neglect)
 7-8: Significant distress (major visible problems, likely vacant)
-9-10: Severe distress (extreme neglect, structural issues, likely abandoned)
+9-10: Severe distress (extreme neglect, structural issues, fire damage, likely abandoned)
 
 If images are unavailable or unclear, score as 1 and note in reasoning.`;
 
