@@ -27,6 +27,15 @@ app.use('/api/score', scoreRouter);
 
 app.get('/api/health', (req, res) => res.json({ status: 'ok' }));
 
+// Serve React frontend in production
+const frontendBuild = path.join(__dirname, '../../frontend/build');
+if (fs.existsSync(frontendBuild)) {
+  app.use(express.static(frontendBuild));
+  app.get('*', (req, res) => {
+    res.sendFile(path.join(frontendBuild, 'index.html'));
+  });
+}
+
 app.listen(PORT, () => {
   console.log(`Server running on http://localhost:${PORT}`);
 });
